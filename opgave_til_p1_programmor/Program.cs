@@ -228,7 +228,7 @@ namespace Opgave_til_p1_programmor
 
                 while (i == 2) // Undermenu 2.0
                 {
-                    Console.WriteLine("Du har valgt Variabler");
+                    Console.WriteLine("Du har valgt Strings");
 
                     Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\nB - tilbage");
                     Console.WriteLine();
@@ -337,6 +337,211 @@ namespace Opgave_til_p1_programmor
 
                 while (i == 3) // Undermenu 3.0
                 {
+                    Console.WriteLine("Du har valgt Arimetiske udtryk");
+
+                    Console.WriteLine("\n1. opgave\nB - tilbage");
+                    Console.WriteLine();
+
+                    opgaveSvar = Console.ReadLine();
+
+                    int u = 0;
+
+                    if (opgaveSvar == "b" || opgaveSvar == "B")
+                    {
+                        opgaveSvar = "";
+                        i = 0;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            u = Convert.ToInt32(opgaveSvar);
+                        }
+                        catch (Exception)
+                        {
+                            Console.Clear();
+
+                            Console.WriteLine("Fejl !");
+
+                            opgaveSvar = "";
+                            u = 0;
+
+                            Console.ReadLine();
+                        }
+                    }
+
+                    Console.Clear();
+
+                    while (u == 1) // opgave 3.1
+                    {
+                        Console.WriteLine("Det her er 1. opgave");
+                        Console.WriteLine();
+
+                        int res1 = 2 + 1 * 2;
+                        int res2 = (2 + 1) * 2;
+                        double res3 = 5 / 2;
+                        int res4 = 8 % 3;
+                        int res5 = 1 - 5;
+
+                        Console.WriteLine($"2 + 1 * 2 = {res1}");
+                        Console.WriteLine($"(2 + 1) * 2 = {res2}");
+                        Console.WriteLine($"5 / 2 = {res3}");
+                        Console.WriteLine($"8 % 3 = {res4}");
+                        Console.WriteLine($"1 - 5 = {res5}");
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                }
+
+                while (i == 4) // Undermenu 4.0
+                {
+                    Console.WriteLine("Du har valgt Variabler i udtryk");
+
+                    Console.WriteLine("\n1. opgave\n2. opgave\nB - tilbage");
+                    Console.WriteLine();
+
+                    opgaveSvar = Console.ReadLine();
+
+                    int u = 0;
+
+                    if (opgaveSvar == "b" || opgaveSvar == "B")
+                    {
+                        opgaveSvar = "";
+                        i = 0;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            u = Convert.ToInt32(opgaveSvar);
+                        }
+                        catch (Exception)
+                        {
+                            Console.Clear();
+
+                            Console.WriteLine("Fejl !");
+
+                            opgaveSvar = "";
+                            u = 0;
+
+                            Console.ReadLine();
+                        }
+                    }
+
+                    Console.Clear();
+
+                    while (u == 1) // opgave 4.1
+                    {
+                        Console.WriteLine("Det her er 1. opgave");
+                        Console.WriteLine();
+
+                        int tal1 = 4;
+                        int tal2 = 13;
+                        int tal3 = 21;
+                        int result = 0;
+
+                        Console.WriteLine($"tal1 = {tal1}");
+                        Console.WriteLine($"tal2 = {tal2}");
+                        Console.WriteLine($"tal3 = {tal3}");
+
+                        result = tal1 + tal2 / tal3;
+
+                        Console.WriteLine($"result = {result}");
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 2) // opgave 4.2
+                    {
+                        Console.WriteLine("Det her er 2. opgave");
+                        Console.WriteLine();
+
+                        int tal1 = 4;
+                        double tal2 = 13.62;
+                        int tal3 = 21;
+                        double result = 0;
+
+                        Console.WriteLine($"tal1 = {tal1}");
+                        Console.WriteLine($"tal2 = {tal2}");
+                        Console.WriteLine($"tal3 = {tal3}");
+
+                        result = tal1 * 5 + tal2 / tal3 -30;
+
+                        Console.WriteLine($"result = {result}");
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                }
+
+                while (i == 5) // Undermenu 5.0
+                {
+                    Console.WriteLine("Du har valgt Arimetiske udtryk");
+
+                    Console.WriteLine("\n1. opgave\nB - tilbage");
+                    Console.WriteLine();
+
+                    opgaveSvar = Console.ReadLine();
+
+                    int u = 0;
+
+                    if (opgaveSvar == "b" || opgaveSvar == "B")
+                    {
+                        opgaveSvar = "";
+                        i = 0;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            u = Convert.ToInt32(opgaveSvar);
+                        }
+                        catch (Exception)
+                        {
+                            Console.Clear();
+
+                            Console.WriteLine("Fejl !");
+
+                            opgaveSvar = "";
+                            u = 0;
+
+                            Console.ReadLine();
+                        }
+                    }
+
+                    Console.Clear();
+
+                    while (u == 1) // opgave 5.1
+                    {
+                        Console.WriteLine("Det her er 1. opgave");
+                        Console.WriteLine();
+
+                        int var1 = 8;
+                        int var2 = 15;
+
+                        Console.WriteLine($"var1 = {var1}");
+                        Console.WriteLine($"var2 = {var2}");
+
+                        bool boolean = var1 > var2;
+
+                        Console.WriteLine($"boolean = {boolean}");
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                }
+
+                while (i == 6)
+                {
                     Console.WriteLine("Du har valgt Variabler");
 
                     Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\nB - tilbage");
@@ -372,6 +577,7 @@ namespace Opgave_til_p1_programmor
 
                     Console.Clear();
                 }
+
             }
 
         }
