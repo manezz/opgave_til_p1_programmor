@@ -542,7 +542,7 @@ namespace Opgave_til_p1_programmor
 
                 while (i == 6)
                 {
-                    Console.WriteLine("Du har valgt Variabler");
+                    Console.WriteLine("Du har valgt If-else statements");
 
                     Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\nB - tilbage");
                     Console.WriteLine();
@@ -576,6 +576,166 @@ namespace Opgave_til_p1_programmor
                     }
 
                     Console.Clear();
+
+                    while (u == 1) // opgave 6.1
+                    {
+                        Console.WriteLine("Det her er 1. opgave");
+                        Console.WriteLine();
+
+                        int tal1 = 42;
+                        int tal2 = 64;
+
+                        Console.WriteLine($"tal1 = {tal1}");
+                        Console.WriteLine($"tal2 = {tal2}");
+                        Console.WriteLine();
+
+                        int result = tal1 + tal2;
+
+                        Console.WriteLine($"result = {result}");
+                        Console.WriteLine();
+
+                        if (result > 100)
+                        {
+                            Console.WriteLine("Summen er storer end 100");
+                        }
+                        else if (result < 100)
+                        {
+                            Console.WriteLine("Summen er mindre end 100");
+                        }
+                        else
+                        {
+                            Console.WriteLine("summen er lig med 100");
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 2) // opgave 6.2
+                    {
+                        Console.WriteLine("Det her er 2. opgave");
+                        Console.WriteLine();
+
+                        int alder = 0;
+
+                        while (true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Intast din alder");
+
+                                alder = Convert.ToInt32(Console.ReadLine());
+
+                                break;
+                            }
+                            catch (Exception) 
+                            {
+                                Console.Clear();
+                                alder = 0;
+
+                                Console.WriteLine("Fejl !");
+                                Console.ReadLine();
+
+                                Console.Clear();
+                            }
+                        }
+
+                        if (alder > 57)
+                        {
+                            Console.WriteLine("Du er for gammel.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Du er ikke for gammel.");
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 3) // opgave 6.3
+                    {
+                        Console.WriteLine("Det her er 3. opgave");
+                        Console.WriteLine();
+
+                        int alder;
+
+                        while (true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Intast din alder");
+
+                                alder = Convert.ToInt32(Console.ReadLine());
+
+                                break;
+                            }
+                            catch (Exception)
+                            {
+                                Console.Clear();
+
+                                Console.WriteLine("Fejl !");
+                                Console.ReadLine();
+
+                                Console.Clear();
+                            }
+                        }
+
+                        if (alder > 60)
+                        {
+                            Console.WriteLine("Du er for gammel.");
+                        }
+                        else if (alder > 50 && alder < 60)
+                        {
+                            Console.WriteLine("Du er hverken for gammel eller for ung.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Du er for ung.");
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 4)
+                    {
+                        Console.WriteLine("Det her er 4. opgave");
+                        Console.WriteLine();
+
+                        string navn = "Magnus";
+                        string brug = "brugernavn";
+                        string pass = "password";
+
+                        string brugSvar;
+                        string passSvar;
+
+                        Console.WriteLine("Intast dit brugernavn");
+                        brugSvar = Console.ReadLine();
+
+                        if (brugSvar == brug)
+                        {
+                            Console.WriteLine("Intast dit password");
+                            passSvar = Console.ReadLine();
+
+                            if (passSvar == pass)
+                            {
+                                Console.WriteLine("")
+                            }
+                            else
+                            {
+                                Console.WriteLine("Password er forkert");
+                            }
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
                 }
 
             }
