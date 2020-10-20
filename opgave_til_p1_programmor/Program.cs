@@ -145,20 +145,120 @@ namespace Opgave_til_p1_programmor
 
                     while (u == 4) // opgave 1.4
                     {
-                        Console.WriteLine("Det her er 3. opgave");
+                        Console.WriteLine("Det her er 4. opgave");
                         Console.WriteLine();
 
                         double Kage = 23.56;
-                        double Øl = 34.67;
-                        double pølse = 65.34;
+                        double ol = 34.67;
+                        double polse = 65.34;
 
-                        //Con
+                        Console.WriteLine($"Kage    {Kage}");
+                        Console.WriteLine($"ol    {ol}");
+                        Console.WriteLine($"polse     {polse}");
 
                         Console.ReadLine();
                         Console.Clear();
                         u = 0;
                     }
 
+                    while (u == 5) // opgave 1.5
+                    {
+                        Console.WriteLine("Det her er 5. opgave");
+                        Console.WriteLine();
+
+                        Console.WriteLine("Hvad er dit navn?");
+                        string navn = Console.ReadLine();
+
+                        int alder = 0;
+                        int h = 1;
+
+                        while (h == 1)
+                        {
+                            Console.WriteLine("Hvor gammel er du?");
+
+                            try
+                            {
+                                alder = Convert.ToInt32(Console.ReadLine());
+                                h = 0;
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Fejl !");
+                                Console.ReadLine();
+                            }
+                        }
+
+                        Console.WriteLine($"Jeg hedder {navn} og er {alder} gammel");
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 6) // opgave 1.6
+                    {
+                        double radius = 0;
+                        int h = 1;
+
+                        while (h == 1)
+                        {
+                            Console.WriteLine("intast radius af en cirkel");
+
+                            try
+                            {
+                                radius = Convert.ToDouble(Console.ReadLine());
+                                h = 0;
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Fejl !");
+                                Console.ReadLine();
+                            }
+                        }
+
+                        Console.WriteLine(Math.Pow(radius, 2) * Math.PI);
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                }
+
+                while (i == 2)
+                {
+                    Console.WriteLine("Du har valgt Variabler");
+
+                    Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\nB - tilbage");
+                    Console.WriteLine();
+
+                    opgaveSvar = Console.ReadLine();
+
+                    if (opgaveSvar == "b" || opgaveSvar == "B")
+                    {
+                        opgaveSvar = "";
+                        i = 0;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            u = Convert.ToInt32(opgaveSvar);
+                        }
+                        catch (Exception)
+                        {
+                            Console.Clear();
+
+                            Console.WriteLine("Fejl !");
+
+                            opgaveSvar = "";
+                            u = 0;
+
+                            Console.ReadLine();
+                        }
+                    }
+
+                    Console.Clear();
                 }
 
             }
