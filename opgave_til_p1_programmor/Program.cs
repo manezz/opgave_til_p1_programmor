@@ -14,7 +14,6 @@ namespace Opgave_til_p1_programmor
             string opgaveSvar = "";
 
             int i = 0;
-            int u = 0;
 
             while (i == 0) // Hovedemenu 0.0
             {
@@ -57,6 +56,8 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine();
 
                     opgaveSvar = Console.ReadLine();
+
+                    int u = 0;
 
                     if (opgaveSvar == "b" || opgaveSvar == "B")
                     {
@@ -225,7 +226,7 @@ namespace Opgave_til_p1_programmor
 
                 }
 
-                while (i == 2)
+                while (i == 2) // Undermenu 2.0
                 {
                     Console.WriteLine("Du har valgt Variabler");
 
@@ -233,6 +234,117 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine();
 
                     opgaveSvar = Console.ReadLine();
+
+                    int u = 0;
+
+                    if (opgaveSvar == "b" || opgaveSvar == "B")
+                    {
+                        opgaveSvar = "";
+                        i = 0;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            u = Convert.ToInt32(opgaveSvar);
+                        }
+                        catch (Exception)
+                        {
+                            Console.Clear();
+
+                            Console.WriteLine("Fejl !");
+
+                            opgaveSvar = "";
+                            u = 0;
+
+                            Console.ReadLine();
+                        }
+                    }
+
+                    Console.Clear();
+
+                    while (u == 1) // opgave 2.1
+                    {
+                        Console.WriteLine("Det her er 1. opgave");
+                        Console.WriteLine();
+
+                        int tal = 4;
+                        double kommaTal = 7.21;
+                        string skrift = "Hej";
+
+                        Console.WriteLine(tal);
+                        Console.WriteLine(kommaTal);
+                        Console.WriteLine(skrift);
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 2) // opgave 2.2
+                    {
+                        Console.WriteLine("Det her er 2. opgave");
+                        Console.WriteLine();
+
+                        int tal = 4;
+                        double kommaTal = 7.21;
+                        string skrift = "Hej";
+
+                        tal = 2;
+                        kommaTal = 9.52;
+                        skrift = "Godag";
+
+                        Console.WriteLine(tal);
+                        Console.WriteLine(kommaTal);
+                        Console.WriteLine(skrift);
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 3) // opgave 2.3
+                    {
+                        Console.WriteLine("Det her er 3. opgave");
+                        Console.WriteLine();
+
+                        string jul = "I dag har vi den 24. December.";
+
+                        Console.WriteLine(jul);
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 4) // opgave 2.4
+                    {
+                        Console.WriteLine("Det her er 4. opgave");
+                        Console.WriteLine();
+
+                        double maengde = 200.50;
+                        string ord = "Jeg har";
+                        string ord2 = "kr. i banken";
+
+                        Console.WriteLine($"{ord} {maengde}{ord2}");
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                }
+
+                while (i == 3) // Undermenu 3.0
+                {
+                    Console.WriteLine("Du har valgt Variabler");
+
+                    Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\nB - tilbage");
+                    Console.WriteLine();
+
+                    opgaveSvar = Console.ReadLine();
+
+                    int u = 0;
 
                     if (opgaveSvar == "b" || opgaveSvar == "B")
                     {
@@ -260,7 +372,6 @@ namespace Opgave_til_p1_programmor
 
                     Console.Clear();
                 }
-
             }
 
         }
