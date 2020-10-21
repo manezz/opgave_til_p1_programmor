@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Opgave_til_p1_programmor
 {
@@ -544,7 +545,7 @@ namespace Opgave_til_p1_programmor
                 {
                     Console.WriteLine("Du har valgt If-else statements");
 
-                    Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\nB - tilbage");
+                    Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\n7. opgave\nB - tilbage");
                     Console.WriteLine();
 
                     opgaveSvar = Console.ReadLine();
@@ -701,9 +702,41 @@ namespace Opgave_til_p1_programmor
                         u = 0;
                     }
 
-                    while (u == 4)
+                    while (u == 4) // opgave 6.4
                     {
                         Console.WriteLine("Det her er 4. opgave");
+                        Console.WriteLine();
+
+                        string navn = "Magnus";
+                        string brug = "brugernavn";
+                        string pass = "password";
+
+                        string brugSvar;
+                        string passSvar;
+
+                        Console.WriteLine("Intast dit brugernavn");
+                        brugSvar = Console.ReadLine();
+
+                        Console.WriteLine("Intast dit password");
+                        passSvar = Console.ReadLine();
+
+                        if (brugSvar == brug && passSvar == pass)
+                        {
+                            Console.WriteLine($"Velkommen {navn}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Brugernavn eller Password er forkert.");
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 5) // opgave 6.5
+                    {
+                        Console.WriteLine("Det her er 5. opgave");
                         Console.WriteLine();
 
                         string navn = "Magnus";
@@ -723,15 +756,166 @@ namespace Opgave_til_p1_programmor
 
                             if (passSvar == pass)
                             {
-                                Console.WriteLine("")
+                                Console.WriteLine($"Velkommen {navn}");
                             }
                             else
                             {
                                 Console.WriteLine("Password er forkert");
                             }
                         }
+                        else
+                        {
+                            Console.WriteLine("brugernavn er forkert");
+                        }
 
                         Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 6) // opgave 6.6
+                    {
+                        Console.WriteLine("Det her er 5. opgave");
+                        Console.WriteLine();
+
+                        Console.WriteLine("Hvor mange km der køres hver dag til og fra arbejde?");
+
+                        int km;
+
+                        while (true)
+                        {
+                            try
+                            {
+                                km = Convert.ToInt32(Console.ReadLine());
+                                
+                                break;
+                            }
+                            catch (Exception)
+                            {
+                                Console.Clear();
+
+                                Console.WriteLine("Fejl !");
+                                Console.ReadLine();
+
+                                Console.Clear();
+                            }
+                        }
+
+                        if (km <= 24)
+                        {
+                            Console.WriteLine("Du faar ikke fradrag.");
+                        }
+                        else if (km > 24 && km <= 120)
+                        {
+                            Console.WriteLine($"Du faar {(km - 24) * 1.93} kr. i fradrag");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Du faar {96 * 1.93 + (km - 120) * 0.97} kr. i fradrag");
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 7) // opgave 6.7
+                    {
+                        Console.WriteLine("Det her er 5. opgave");
+                        Console.WriteLine();
+
+                        string farve;
+                        string alderString;
+                        int alder;
+
+                        Console.Title = "Festen";
+
+                        Console.WriteLine($"Title: {Console.Title}");
+                        Console.WriteLine();
+
+                        Console.WriteLine("Hvilken farve foretrekker du?");
+
+                        Console.WriteLine("\nRød\nGrøn\nBlå\nGul");
+                        Console.WriteLine();
+
+                        farve = Console.ReadLine();
+
+                        while (true)
+                        {
+                            if (farve == "Rød" || farve == "rød")
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Black;
+
+                                break;
+                            }
+                            else if (farve == "Grøn" || farve == "grøn")
+                            {
+                                Console.BackgroundColor = ConsoleColor.Green;
+                                Console.ForegroundColor = ConsoleColor.Black;
+
+                                break;
+                            }
+                            else if (farve == "Blå" || farve == "blå")
+                            {
+                                Console.BackgroundColor = ConsoleColor.Blue;
+                                Console.ForegroundColor = ConsoleColor.Black;
+
+                                break;
+                            }
+                            else if (farve == "Gul" || farve == "gul")
+                            {
+                                Console.BackgroundColor = ConsoleColor.Yellow;
+                                Console.ForegroundColor = ConsoleColor.Black;
+
+                                break;
+                            }
+                            else
+                            {
+                                Console.Clear();
+
+                                Console.WriteLine("Fejl !");
+                                Console.ReadLine();
+
+                                Console.Clear();
+                            }
+                        }
+
+                        Console.WriteLine("Skriv din alder");
+
+                        while (true)
+                        {
+                            try
+                            {
+                                alderString = Console.ReadLine();
+                                alder = Convert.ToInt32(alderString);
+
+                                break;
+                            }
+                            catch (Exception)
+                            {
+                                Console.Clear();
+
+                                Console.WriteLine("Fejl !");
+                                Console.ReadLine();
+
+                                Console.Clear();
+                            }
+                        }
+
+                        if (alder >= 18)
+                        {
+                            Console.WriteLine("Velkommen til cocktailbaren.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Velkommen til sodavandsbaren.");
+                        }
+
+                        Console.WriteLine("Vent 10 sek (skriv ikke noget)");
+                        Thread.Sleep(10000);
+                        Console.ResetColor();
+                        
                         Console.Clear();
                         u = 0;
                     }
