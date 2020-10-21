@@ -541,7 +541,7 @@ namespace Opgave_til_p1_programmor
 
                 }
 
-                while (i == 6)
+                while (i == 6) // Undermenu 6.0
                 {
                     Console.WriteLine("Du har valgt If-else statements");
 
@@ -916,6 +916,251 @@ namespace Opgave_til_p1_programmor
                         Thread.Sleep(10000);
                         Console.ResetColor();
                         
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                }
+
+                while (i == 7) // Undermenu 7.0
+                {
+                    Console.WriteLine("Du har valgt Switch Case");
+
+                    Console.WriteLine("\n1. opgave\n2. opgave\nB - tilbage");
+                    Console.WriteLine();
+
+                    opgaveSvar = Console.ReadLine();
+
+                    int u = 0;
+
+                    if (opgaveSvar == "b" || opgaveSvar == "B")
+                    {
+                        opgaveSvar = "";
+                        i = 0;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            u = Convert.ToInt32(opgaveSvar);
+                        }
+                        catch (Exception)
+                        {
+                            Console.Clear();
+
+                            Console.WriteLine("Fejl !");
+
+                            opgaveSvar = "";
+                            u = 0;
+
+                            Console.ReadLine();
+                        }
+                    }
+
+                    Console.Clear();
+
+                    while (u == 1) // opgave 7.1
+                    {
+                        Console.WriteLine("Det her er 1. opgave");
+                        Console.WriteLine();
+
+                        int caseSvar;
+
+                        while(true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Skriv et mellem 1 og 6.");
+
+                                caseSvar = Convert.ToInt32(Console.ReadLine());
+
+                                break;
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Fejl !");
+                            }
+                        }
+
+                        switch (caseSvar)
+                        {
+                            case 1:
+                            case 2:
+                            case 3:
+                            case 5:
+                            case 6:
+                                {
+                                    Console.WriteLine($"Du har tastet {caseSvar}");
+
+                                    break;
+                                }
+                            case 4:
+                                {
+                                    string tillykke = "TILLYKKE DU HAR VUNDET";
+
+                                    Console.SetCursorPosition(Console.WindowWidth / 2 - tillykke.Length / 2 , Console.WindowHeight / 2);
+
+                                    Console.ForegroundColor = ConsoleColor.White;
+
+                                    Console.WriteLine(tillykke);
+
+                                    Console.ResetColor();
+                                    Console.WriteLine();
+
+                                    break;
+                                }
+                            default:
+                                {
+                                    Console.WriteLine("Du har tastet forkert.");
+                                    Console.WriteLine("Vent 10 sek (Tast ikke noget)");
+                                    Thread.Sleep(10000);
+
+                                    break;
+                                }
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 2) // opgave 7.2
+                    {
+                        Console.WriteLine("Det her er 2. opgave");
+                        Console.WriteLine();
+
+                        string valg;
+
+                        Console.WriteLine("Velg en drink.");
+
+                        Console.WriteLine("\n1. Isbjorn\n2. Champagnebrus\n3. Tequila Sunrise\n4. Mojito\n5. Brandbil\n6. Filur");
+
+                        valg = Console.ReadLine();
+
+                        double pris = 0;
+
+                        switch (valg)
+                        {
+                            case "1":
+                            case "isbjorn":
+                            case "Isbjorn":
+                                {
+                                    pris = 49.99;
+                                    
+                                    break;
+                                }
+                            case "2":
+                            case "champagnebrus":
+                            case "Champagnebrus":
+                                {
+                                    pris = 54.99;
+                                    
+                                    break;
+                                }
+                            case "3":
+                            case "tequila sunrise":
+                            case "Tequila Sunrise":
+                                {
+                                    pris = 59.99;
+                                    
+                                    break;
+                                }
+                            case "4":
+                            case "mojito":
+                            case "Mojito":
+                                {
+                                    pris = 64.99;
+
+                                    break;
+                                }
+                            case "5":
+                            case "brandbil":
+                            case "Brandbil":
+                                {
+                                    pris = 69.99;
+
+                                    break;
+                                }
+                            case "6":
+                            case "filur":
+                            case "Filur":
+                                {
+                                    pris = 74.99;
+
+                                    break;
+                                }
+                            default:
+                                {
+                                    Console.WriteLine("Det er ikke et acceptabelt valg.");
+
+                                    break;
+                                }
+                        }
+
+                        Console.WriteLine($"Du har valgt {valg}, som koster {pris} kr.");
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                }
+
+                while (i == 8) // undermenu 8.0
+                {
+                    Console.WriteLine("Du har valgt Loops");
+
+                    Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\n7. opgave\n8. opgave\n9. opgave\nB - tilbage");
+                    Console.WriteLine();
+
+                    opgaveSvar = Console.ReadLine();
+
+                    int u = 0;
+
+                    if (opgaveSvar == "b" || opgaveSvar == "B")
+                    {
+                        opgaveSvar = "";
+                        i = 0;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            u = Convert.ToInt32(opgaveSvar);
+                        }
+                        catch (Exception)
+                        {
+                            Console.Clear();
+
+                            Console.WriteLine("Fejl !");
+
+                            opgaveSvar = "";
+                            u = 0;
+
+                            Console.ReadLine();
+                        }
+                    }
+
+                    Console.Clear();
+
+                    while (u == 1) // opgave 8.1
+                    {
+                        Console.WriteLine("Det her er 1. opgave");
+                        Console.WriteLine();
+
+                        string stringSvar;
+
+                        while (true)
+                        {
+                            Console.WriteLine("velg et loop");
+                            Console.WriteLine("\nwhile loop\nfor loop");
+
+                            //if (stringSvar)
+                        }
+
+                        Console.ReadLine();
+
+                        Console.ReadLine();
                         Console.Clear();
                         u = 0;
                     }
