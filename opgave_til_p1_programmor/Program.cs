@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Globalization;
 
 namespace Opgave_til_p1_programmor
 {
@@ -1148,17 +1149,45 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine("Det her er 1. opgave");
                         Console.WriteLine();
 
-                        string stringSvar;
-
-                        while (true)
+                        for (int j = 1; j <= 10; j++)
                         {
-                            Console.WriteLine("velg et loop");
-                            Console.WriteLine("\nwhile loop\nfor loop");
+                            Console.WriteLine($"for loop: {j}");
+                        }
 
-                            //if (stringSvar)
+                        Console.WriteLine();
+
+                        int n = 1;
+
+                        while (n <= 10)
+                        {
+                            Console.WriteLine($"while loop {n}");
+                            n++;
                         }
 
                         Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 2) // opgave 8.2
+                    {
+                        Console.WriteLine("Det her er 2. opgave");
+                        Console.WriteLine();
+
+                        for (int j = 100; j > 0; j--)
+                        {
+                            Console.WriteLine($"for loop {j}");
+                        }
+
+                        int n = 100;
+
+                        Console.WriteLine();
+
+                        while (n > 0)
+                        {
+                            Console.WriteLine($"while loop {n}");
+                            n--;
+                        }
 
                         Console.ReadLine();
                         Console.Clear();
