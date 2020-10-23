@@ -10,12 +10,50 @@ namespace Opgave_til_p1_programmor
 {
     class Program
     {
+        public static string opgaveSvar = "";
+        public static int i = 0;
+        public static int u = 0;
+
+        public class Pro : Program
+        {
+            public void start()
+            {
+                opgaveSvar = Console.ReadLine();
+
+                u = 0;
+
+                if (opgaveSvar == "b" || opgaveSvar == "B")
+                {
+                    opgaveSvar = "";
+                    i = 0;
+                }
+                else
+                {
+                    try
+                    {
+                        u = Convert.ToInt32(opgaveSvar);
+                    }
+                    catch (Exception)
+                    {
+                        Console.Clear();
+
+                        Console.WriteLine("Fejl !");
+
+                        opgaveSvar = "";
+                        u = 0;
+
+                        Console.ReadLine();
+                    }
+                }
+
+                Console.Clear();
+            }
+        }
+
         static void Main(string[] args)
         {
             string svar = "";
-            string opgaveSvar = "";
 
-            int i = 0;
 
             while (i == 0) // Hovedemenu 0.0
             {
@@ -57,35 +95,8 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\nB - tilbage");
                     Console.WriteLine();
 
-                    opgaveSvar = Console.ReadLine();
-
-                    int u = 0;
-
-                    if (opgaveSvar == "b" || opgaveSvar == "B")
-                    {
-                        opgaveSvar = "";
-                        i = 0;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            u = Convert.ToInt32(opgaveSvar);
-                        }
-                        catch (Exception)
-                        {
-                            Console.Clear();
-
-                            Console.WriteLine("Fejl !");
-
-                            opgaveSvar = "";
-                            u = 0;
-
-                            Console.ReadLine();
-                        }
-                    }
-
-                    Console.Clear();
+                    Pro pro1 = new Pro();
+                    pro1.start();
 
                     while (u == 1) // opgave 1.1
                     {
@@ -1491,5 +1502,6 @@ namespace Opgave_til_p1_programmor
             }
 
         }
+
     }
 }
