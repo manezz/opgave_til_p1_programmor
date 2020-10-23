@@ -472,7 +472,7 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine($"tal2 = {tal2}");
                         Console.WriteLine($"tal3 = {tal3}");
 
-                        result = tal1 * 5 + tal2 / tal3 -30;
+                        result = tal1 * 5 + tal2 / tal3 - 30;
 
                         Console.WriteLine($"result = {result}");
 
@@ -631,7 +631,7 @@ namespace Opgave_til_p1_programmor
 
                                 break;
                             }
-                            catch (Exception) 
+                            catch (Exception)
                             {
                                 Console.Clear();
                                 alder = 0;
@@ -788,7 +788,7 @@ namespace Opgave_til_p1_programmor
                             try
                             {
                                 km = Convert.ToInt32(Console.ReadLine());
-                                
+
                                 break;
                             }
                             catch (Exception)
@@ -916,7 +916,7 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine("Vent 10 sek (skriv ikke noget)");
                         Thread.Sleep(10000);
                         Console.ResetColor();
-                        
+
                         Console.Clear();
                         u = 0;
                     }
@@ -967,7 +967,7 @@ namespace Opgave_til_p1_programmor
 
                         int caseSvar;
 
-                        while(true)
+                        while (true)
                         {
                             try
                             {
@@ -999,7 +999,7 @@ namespace Opgave_til_p1_programmor
                                 {
                                     string tillykke = "TILLYKKE DU HAR VUNDET";
 
-                                    Console.SetCursorPosition(Console.WindowWidth / 2 - tillykke.Length / 2 , Console.WindowHeight / 2);
+                                    Console.SetCursorPosition(Console.WindowWidth / 2 - tillykke.Length / 2, Console.WindowHeight / 2);
 
                                     Console.ForegroundColor = ConsoleColor.White;
 
@@ -1047,7 +1047,7 @@ namespace Opgave_til_p1_programmor
                             case "Isbjorn":
                                 {
                                     pris = 49.99;
-                                    
+
                                     break;
                                 }
                             case "2":
@@ -1055,7 +1055,7 @@ namespace Opgave_til_p1_programmor
                             case "Champagnebrus":
                                 {
                                     pris = 54.99;
-                                    
+
                                     break;
                                 }
                             case "3":
@@ -1063,7 +1063,7 @@ namespace Opgave_til_p1_programmor
                             case "Tequila Sunrise":
                                 {
                                     pris = 59.99;
-                                    
+
                                     break;
                                 }
                             case "4":
@@ -1194,6 +1194,298 @@ namespace Opgave_til_p1_programmor
                         u = 0;
                     }
 
+                    while (u == 3) // opgave 8.3
+                    {
+                        Console.WriteLine("Det her er 3. opgave");
+                        Console.WriteLine();
+
+                        for (int j = 5; j <= 50; j += 5)
+                        {
+                            Console.WriteLine(j);
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 4) // opgave 8.4
+                    {
+                        Console.WriteLine("Det her er 4. opgave");
+                        Console.WriteLine();
+
+                        for (int j = 20; j >= 0; j--)
+                        {
+                            Console.WriteLine($"for loop {j}");
+                        }
+
+                        Console.WriteLine();
+
+                        int n = 20;
+
+                        while (n >= 0)
+                        {
+                            Console.WriteLine($"while loop {n}");
+                            n--;
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 5) // opgave 8.5
+                    {
+                        Console.WriteLine("Det her er 5. opgave");
+                        Console.WriteLine();
+
+                        for (int j = 1; j * 7 <= 70; j++)
+                        {
+                            Console.WriteLine($"{j} * 7 = {j * 7}");
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 6) // opgave 8.6
+                    {
+                        Console.WriteLine("Det her er 6. opgave");
+                        Console.WriteLine();
+
+                        int k = 0;
+
+                        while (true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Velg en tabel (skriv et tal)");
+
+                                k = Convert.ToInt32(Console.ReadLine());
+
+                                break;
+                            }
+                            catch (Exception)
+                            {
+                                Console.Clear();
+
+                                Console.WriteLine("Fejl !");
+
+                                Console.ReadLine();
+                                Console.Clear();
+                            }
+                        }
+
+                        for (int j = 1; j * k <= k * 10; j++)
+                        {
+                            Console.WriteLine($"{j} * {k} = {j * k}");
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 7) // opgave 8.7
+                    {
+                        Console.WriteLine("Det her er 7. opgave");
+                        Console.WriteLine();
+
+                        int startPos1 = 20;
+                        int startPos2 = 4;
+
+                        int brede = 10;
+                        int lengde = 4;
+
+                        Console.SetCursorPosition(startPos1, startPos2);
+
+                        for (int y = 1; y < brede; y++)
+                        {
+                            Console.SetCursorPosition(y + startPos1, startPos2);
+                            Console.Write("\x2500");
+
+                            Console.SetCursorPosition(y + startPos1, startPos2 + lengde);
+                            Console.Write("\x2500");
+                        }
+
+                        for (int y = 1; y < lengde; y++)
+                        {
+                            Console.SetCursorPosition(startPos1, y + startPos2);
+                            Console.Write("\x2502");
+
+                            Console.SetCursorPosition(startPos1 + brede, y + startPos2);
+                            Console.Write("\x2502");
+                        }
+
+                        Console.SetCursorPosition(startPos1, startPos2);
+                        Console.Write("\x250C");
+
+                        Console.SetCursorPosition(startPos1 + brede, startPos2);
+                        Console.Write("\x2510");
+
+                        Console.SetCursorPosition(startPos1, startPos2 + lengde);
+                        Console.Write("\x2514");
+
+                        Console.SetCursorPosition(startPos1 + brede, startPos2 + lengde);
+                        Console.Write("\x2518");
+
+                        Console.WriteLine();
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 8) // opgave 8.8
+                    {
+                        Console.WriteLine("Det her er 8. opgave");
+                        Console.WriteLine();
+
+                        int startPos1 = 20;
+                        int startPos2 = 4;
+
+                        int brede = 10;
+                        int lengde = 4;
+
+                        string navn = "Magnus";
+
+                        Console.SetCursorPosition(startPos1, startPos2);
+
+                        for (int y = 1; y < brede; y++)
+                        {
+                            Console.SetCursorPosition(y + startPos1, startPos2);
+                            Console.Write("\x2500");
+
+                            Console.SetCursorPosition(y + startPos1, startPos2 + lengde);
+                            Console.Write("\x2500");
+                        }
+
+                        for (int y = 1; y < lengde; y++)
+                        {
+                            Console.SetCursorPosition(startPos1, y + startPos2);
+                            Console.Write("\x2502");
+
+                            Console.SetCursorPosition(startPos1 + brede, y + startPos2);
+                            Console.Write("\x2502");
+                        }
+
+                        Console.SetCursorPosition(startPos1, startPos2);
+                        Console.Write("\x250C");
+
+                        Console.SetCursorPosition(startPos1 + brede, startPos2);
+                        Console.Write("\x2510");
+
+                        Console.SetCursorPosition(startPos1, startPos2 + lengde);
+                        Console.Write("\x2514");
+
+                        Console.SetCursorPosition(startPos1 + brede, startPos2 + lengde);
+                        Console.Write("\x2518");
+
+                        Console.SetCursorPosition(startPos1 + brede / 2 - navn.Length / 2, startPos2 + lengde / 2);
+                        Console.Write(navn);
+
+                        Console.WriteLine();
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                    while (u == 9) // opgave 8.9
+                    {
+                        Console.WriteLine("Det her er 9. opgave");
+                        Console.WriteLine();
+
+                        int startPos1 = 20;
+                        int startPos2 = 4;
+
+                        int brede = 0;
+                        int lengde = 0;
+
+                        string navn;
+
+                        Console.WriteLine("Intast dit fornavn");
+                        navn = Console.ReadLine();
+
+                        while (true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Intast brede af rammen");
+                                brede = Convert.ToInt32(Console.ReadLine());
+
+                                Console.WriteLine("Intast lengde af rammen");
+                                lengde = Convert.ToInt32(Console.ReadLine());
+
+                                break;
+                            }
+                            catch (Exception)
+                            {
+                                Console.Clear();
+
+                                Console.WriteLine("Fejl !");
+                                Console.ReadLine();
+
+                                Console.Clear();
+                            }
+                        }
+
+                        Console.Clear();
+
+                        Console.SetCursorPosition(startPos1, startPos2);
+
+                        for (int y = 1; y < brede; y++)
+                        {
+                            Console.SetCursorPosition(y + startPos1, startPos2);
+                            Console.Write("\x2500");
+
+                            Console.SetCursorPosition(y + startPos1, startPos2 + lengde);
+                            Console.Write("\x2500");
+                        }
+
+                        for (int y = 1; y < lengde; y++)
+                        {
+                            Console.SetCursorPosition(startPos1, y + startPos2);
+                            Console.Write("\x2502");
+
+                            Console.SetCursorPosition(startPos1 + brede, y + startPos2);
+                            Console.Write("\x2502");
+                        }
+
+                        Console.SetCursorPosition(startPos1, startPos2);
+                        Console.Write("\x250C");
+
+                        Console.SetCursorPosition(startPos1 + brede, startPos2);
+                        Console.Write("\x2510");
+
+                        Console.SetCursorPosition(startPos1, startPos2 + lengde);
+                        Console.Write("\x2514");
+
+                        Console.SetCursorPosition(startPos1 + brede, startPos2 + lengde);
+                        Console.Write("\x2518");
+
+                        Console.SetCursorPosition(startPos1 + brede / 2 - navn.Length / 2, startPos2 + lengde / 2);
+                        Console.Write(navn);
+
+                        Console.WriteLine();
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        u = 0;
+                    }
+
+                }
+
+                while (i == 9)
+                {
+                    Console.WriteLine("Du har valgt Loops");
+
+                    Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\n7. opgave\n8. opgave\n9. opgave\nB - tilbage");
+                    Console.WriteLine();
+
+
+
                 }
 
             }
@@ -1201,4 +1493,3 @@ namespace Opgave_til_p1_programmor
         }
     }
 }
-
