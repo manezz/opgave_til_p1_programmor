@@ -1,3 +1,4 @@
-# opgave_til_p1_programmor
+# Opgave Til P1 Programmor
 forste p1 C# Projekt
+
 ![Optional Text](../master/Udklip.PNG)
