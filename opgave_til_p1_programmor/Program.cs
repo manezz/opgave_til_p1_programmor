@@ -16,7 +16,7 @@ namespace Opgave_til_p1_programmor
 
         public class Pro : Program
         {
-            public void start()
+            public void back()
             {
                 opgaveSvar = Console.ReadLine();
 
@@ -48,12 +48,21 @@ namespace Opgave_til_p1_programmor
 
                 Console.Clear();
             }
+
+            public void slut()
+            {
+                Console.ReadLine();
+                Console.Clear();
+                u = 0;
+            }
         }
 
         static void Main(string[] args)
         {
-            string svar = "";
+            Pro back1 = new Pro();
+            Pro slut1 = new Pro();
 
+            string svar;
 
             while (i == 0) // Hovedemenu 0.0
             {
@@ -95,8 +104,7 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\nB - tilbage");
                     Console.WriteLine();
 
-                    Pro pro1 = new Pro();
-                    pro1.start();
+                    back1.back();
 
                     while (u == 1) // opgave 1.1
                     {
@@ -112,9 +120,7 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine(tal1);
                         Console.WriteLine(tal2);
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 2) // opgave 1.2
@@ -136,9 +142,7 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine($"Tal1 er {tal1}");
                         Console.WriteLine($"Tal2 er {tal2}");
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 3) // opgave 1.3
@@ -152,9 +156,7 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine($"Jeg hedder {Navn}, er {Alder} år gammel pg har tjent {Penge} kr. på at lappe cykler");
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 4) // opgave 1.4
@@ -170,9 +172,7 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine($"ol    {ol}");
                         Console.WriteLine($"polse     {polse}");
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 5) // opgave 1.5
@@ -204,9 +204,7 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine($"Jeg hedder {navn} og er {alder} gammel");
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 6) // opgave 1.6
@@ -232,9 +230,7 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine(Math.Pow(radius, 2) * Math.PI);
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                 }
@@ -246,35 +242,7 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\nB - tilbage");
                     Console.WriteLine();
 
-                    opgaveSvar = Console.ReadLine();
-
-                    int u = 0;
-
-                    if (opgaveSvar == "b" || opgaveSvar == "B")
-                    {
-                        opgaveSvar = "";
-                        i = 0;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            u = Convert.ToInt32(opgaveSvar);
-                        }
-                        catch (Exception)
-                        {
-                            Console.Clear();
-
-                            Console.WriteLine("Fejl !");
-
-                            opgaveSvar = "";
-                            u = 0;
-
-                            Console.ReadLine();
-                        }
-                    }
-
-                    Console.Clear();
+                    back1.back();
 
                     while (u == 1) // opgave 2.1
                     {
@@ -289,9 +257,7 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine(kommaTal);
                         Console.WriteLine(skrift);
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 2) // opgave 2.2
@@ -311,9 +277,7 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine(kommaTal);
                         Console.WriteLine(skrift);
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 3) // opgave 2.3
@@ -325,9 +289,7 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine(jul);
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 4) // opgave 2.4
@@ -341,9 +303,7 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine($"{ord} {maengde}{ord2}");
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                 }
@@ -355,35 +315,7 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine("\n1. opgave\nB - tilbage");
                     Console.WriteLine();
 
-                    opgaveSvar = Console.ReadLine();
-
-                    int u = 0;
-
-                    if (opgaveSvar == "b" || opgaveSvar == "B")
-                    {
-                        opgaveSvar = "";
-                        i = 0;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            u = Convert.ToInt32(opgaveSvar);
-                        }
-                        catch (Exception)
-                        {
-                            Console.Clear();
-
-                            Console.WriteLine("Fejl !");
-
-                            opgaveSvar = "";
-                            u = 0;
-
-                            Console.ReadLine();
-                        }
-                    }
-
-                    Console.Clear();
+                    back1.back();
 
                     while (u == 1) // opgave 3.1
                     {
@@ -402,9 +334,7 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine($"8 % 3 = {res4}");
                         Console.WriteLine($"1 - 5 = {res5}");
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                 }
@@ -416,35 +346,7 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine("\n1. opgave\n2. opgave\nB - tilbage");
                     Console.WriteLine();
 
-                    opgaveSvar = Console.ReadLine();
-
-                    int u = 0;
-
-                    if (opgaveSvar == "b" || opgaveSvar == "B")
-                    {
-                        opgaveSvar = "";
-                        i = 0;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            u = Convert.ToInt32(opgaveSvar);
-                        }
-                        catch (Exception)
-                        {
-                            Console.Clear();
-
-                            Console.WriteLine("Fejl !");
-
-                            opgaveSvar = "";
-                            u = 0;
-
-                            Console.ReadLine();
-                        }
-                    }
-
-                    Console.Clear();
+                    back1.back();
 
                     while (u == 1) // opgave 4.1
                     {
@@ -464,9 +366,7 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine($"result = {result}");
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 2) // opgave 4.2
@@ -487,9 +387,7 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine($"result = {result}");
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                 }
@@ -501,35 +399,7 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine("\n1. opgave\nB - tilbage");
                     Console.WriteLine();
 
-                    opgaveSvar = Console.ReadLine();
-
-                    int u = 0;
-
-                    if (opgaveSvar == "b" || opgaveSvar == "B")
-                    {
-                        opgaveSvar = "";
-                        i = 0;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            u = Convert.ToInt32(opgaveSvar);
-                        }
-                        catch (Exception)
-                        {
-                            Console.Clear();
-
-                            Console.WriteLine("Fejl !");
-
-                            opgaveSvar = "";
-                            u = 0;
-
-                            Console.ReadLine();
-                        }
-                    }
-
-                    Console.Clear();
+                    back1.back();
 
                     while (u == 1) // opgave 5.1
                     {
@@ -546,9 +416,7 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine($"boolean = {boolean}");
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                 }
@@ -560,35 +428,7 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\n7. opgave\nB - tilbage");
                     Console.WriteLine();
 
-                    opgaveSvar = Console.ReadLine();
-
-                    int u = 0;
-
-                    if (opgaveSvar == "b" || opgaveSvar == "B")
-                    {
-                        opgaveSvar = "";
-                        i = 0;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            u = Convert.ToInt32(opgaveSvar);
-                        }
-                        catch (Exception)
-                        {
-                            Console.Clear();
-
-                            Console.WriteLine("Fejl !");
-
-                            opgaveSvar = "";
-                            u = 0;
-
-                            Console.ReadLine();
-                        }
-                    }
-
-                    Console.Clear();
+                    back1.back();
 
                     while (u == 1) // opgave 6.1
                     {
@@ -620,9 +460,7 @@ namespace Opgave_til_p1_programmor
                             Console.WriteLine("summen er lig med 100");
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 2) // opgave 6.2
@@ -663,9 +501,7 @@ namespace Opgave_til_p1_programmor
                             Console.WriteLine("Du er ikke for gammel.");
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 3) // opgave 6.3
@@ -741,9 +577,7 @@ namespace Opgave_til_p1_programmor
                             Console.WriteLine("Brugernavn eller Password er forkert.");
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 5) // opgave 6.5
@@ -780,9 +614,7 @@ namespace Opgave_til_p1_programmor
                             Console.WriteLine("brugernavn er forkert");
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 6) // opgave 6.6
@@ -941,35 +773,7 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine("\n1. opgave\n2. opgave\nB - tilbage");
                     Console.WriteLine();
 
-                    opgaveSvar = Console.ReadLine();
-
-                    int u = 0;
-
-                    if (opgaveSvar == "b" || opgaveSvar == "B")
-                    {
-                        opgaveSvar = "";
-                        i = 0;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            u = Convert.ToInt32(opgaveSvar);
-                        }
-                        catch (Exception)
-                        {
-                            Console.Clear();
-
-                            Console.WriteLine("Fejl !");
-
-                            opgaveSvar = "";
-                            u = 0;
-
-                            Console.ReadLine();
-                        }
-                    }
-
-                    Console.Clear();
+                    back1.back();
 
                     while (u == 1) // opgave 7.1
                     {
@@ -1031,9 +835,7 @@ namespace Opgave_til_p1_programmor
                                 }
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 2) // opgave 7.2
@@ -1111,9 +913,7 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine($"Du har valgt {valg}, som koster {pris} kr.");
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                 }
@@ -1125,35 +925,7 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\n7. opgave\n8. opgave\n9. opgave\nB - tilbage");
                     Console.WriteLine();
 
-                    opgaveSvar = Console.ReadLine();
-
-                    int u = 0;
-
-                    if (opgaveSvar == "b" || opgaveSvar == "B")
-                    {
-                        opgaveSvar = "";
-                        i = 0;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            u = Convert.ToInt32(opgaveSvar);
-                        }
-                        catch (Exception)
-                        {
-                            Console.Clear();
-
-                            Console.WriteLine("Fejl !");
-
-                            opgaveSvar = "";
-                            u = 0;
-
-                            Console.ReadLine();
-                        }
-                    }
-
-                    Console.Clear();
+                    back1.back();
 
                     while (u == 1) // opgave 8.1
                     {
@@ -1175,9 +947,7 @@ namespace Opgave_til_p1_programmor
                             n++;
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 2) // opgave 8.2
@@ -1200,9 +970,7 @@ namespace Opgave_til_p1_programmor
                             n--;
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 3) // opgave 8.3
@@ -1215,9 +983,7 @@ namespace Opgave_til_p1_programmor
                             Console.WriteLine(j);
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 4) // opgave 8.4
@@ -1240,9 +1006,7 @@ namespace Opgave_til_p1_programmor
                             n--;
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 5) // opgave 8.5
@@ -1255,9 +1019,7 @@ namespace Opgave_til_p1_programmor
                             Console.WriteLine($"{j} * 7 = {j * 7}");
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 6) // opgave 8.6
@@ -1293,9 +1055,7 @@ namespace Opgave_til_p1_programmor
                             Console.WriteLine($"{j} * {k} = {j * k}");
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 7) // opgave 8.7
@@ -1398,9 +1158,7 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine();
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                     while (u == 9) // opgave 8.9
@@ -1481,22 +1239,49 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine();
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.slut();
                     }
 
                 }
 
-                while (i == 9)
+                while (i == 9) // Undermenu 9.0
                 {
                     Console.WriteLine("Du har valgt Loops");
 
                     Console.WriteLine("\n1. opgave\n2. opgave\n3. opgave\n4. opgave\n5. opgave\n6. opgave\n7. opgave\n8. opgave\n9. opgave\nB - tilbage");
                     Console.WriteLine();
 
+                    back1.back();
+
+                    while (u == 1) // opgave 9.1
+                    {
+                        Console.WriteLine("Det her er 1. opgave");
+                        Console.WriteLine();
+
+                        Console.WriteLine("Udskriver 3 tabelen");
+                        Console.WriteLine();
+
+                        for (int j = 3; j <= 21; j += 3)
+                        {
+                            Console.WriteLine(j);
+                        }
+
+                        Console.WriteLine();
+                        Console.WriteLine("Loopet er nu stoppet");
+
+                        slut1.slut();
+                    }
+
+                    while (u == 2)
+                    {
+                        Console.WriteLine("Det her er 2. opgave");
+                        Console.WriteLine();
 
 
+
+                        slut1.slut();
+                    }
+                    
                 }
 
             }
