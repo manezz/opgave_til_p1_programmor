@@ -1413,9 +1413,35 @@ namespace Opgave_til_p1_programmor
                         slut1.Slut();
                     }
                     
-                    while (u == 4)
+                    while (u == 5)
                     {
-                        
+                        start1.Start();
+
+                        double penge = 0;
+
+                        Console.WriteLine("Dette program udregner, hvor meget du faar i rente paa et aar.");
+                        Console.WriteLine();
+
+                        while (true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Hvor mange penge har du paa din konto?");
+                                penge = Convert.ToDouble(Console.ReadLine());
+                                break;
+                            }
+                            catch (Exception)
+                            {
+                                fejl1.Fejl();
+                            }
+                        }
+
+                        if (penge <= 25000)
+                        {
+                            Console.WriteLine($"Du har {penge * 0,25 / 100} kr. efter et aar.");
+                        }
+
+                        slut1.Slut();
                     }
                     
                 }
