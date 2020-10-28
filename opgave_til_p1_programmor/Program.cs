@@ -1413,7 +1413,71 @@ namespace Opgave_til_p1_programmor
                         slut1.Slut();
                     }
                     
-                    while (u == 5)
+                    while (u == 4) // opgave 9.4
+                    {
+                        start1.Start();
+
+                        double indkomst;
+                        double bundskat = 0;
+                        double mellemskat = 0;
+                        double topskat = 0;
+
+                        Console.WriteLine("Det her program viser, hvor meget du skal betale i skat.");
+                        Console.WriteLine();
+
+                        while (true)
+                        {
+                            try
+                            {
+                                Console.WriteLine("Hvor meget har du haft i indkomst i aar?");
+                                Console.WriteLine();
+
+                                indkomst = Convert.ToDouble(Console.ReadLine());
+                                Console.WriteLine();
+
+                                break;
+                            }
+                            catch (Exception)
+                            {
+                                fejl1.Fejl();
+                            }
+                        }
+
+                        if (indkomst < 42000 || indkomst == 42000)
+                        {
+                            Console.WriteLine("Du skal ikke betale skat.");
+                        }
+                        else if (indkomst > 42000 && indkomst < 280000)
+                        {
+                            bundskat = (indkomst - 42000) / 100 * 30;   
+
+                            Console.WriteLine($"Bundskat 30% = {bundskat} kr.");
+                        }
+                        else if (indkomst < 390000)
+                        {
+                            bundskat = 238000 / 100 * 30;
+                            mellemskat = (indkomst - 280000) / 100 * 36;
+
+                            Console.WriteLine($"Bundskat 30% = {bundskat} kr.");
+                            Console.WriteLine($"Mellemskat 6% = {mellemskat} kr.");
+                        }
+                        else if (indkomst > 390000 || indkomst == 390000)
+                        {
+                            bundskat = 238000 / 100 * 30;
+                            mellemskat = 110000 / 100 * 36;
+                            topskat = (indkomst - 390000) / 100 * 51;
+
+                            Console.WriteLine($"Bundskat 30% = {bundskat} kr.");
+                            Console.WriteLine($"Mellemskat 6% = {mellemskat} kr.");
+                            Console.WriteLine($"Topskat 15% = {topskat} kr.");
+                        }
+
+                        Console.WriteLine($"I Alt {bundskat + mellemskat + topskat} kr.");
+
+                        slut1.Slut();
+                    }
+
+                    while (u == 5) // opgave 9.5
                     {
                         start1.Start();
 
@@ -1427,7 +1491,11 @@ namespace Opgave_til_p1_programmor
                             try
                             {
                                 Console.WriteLine("Hvor mange penge har du paa din konto?");
+                                Console.WriteLine();
+
                                 penge = Convert.ToDouble(Console.ReadLine());
+                                Console.WriteLine();
+
                                 break;
                             }
                             catch (Exception)
@@ -1436,15 +1504,28 @@ namespace Opgave_til_p1_programmor
                             }
                         }
 
-                        if (penge <= 25000)
+                        if (penge < 25000 || penge == 25000)
                         {
-                            Console.WriteLine($"Du har {penge * 0,25 / 100} kr. efter et aar.");
+                            Console.WriteLine($"Du har { penge * 0.25 / 100 } kr. efter et aar.");
+                        }
+                        else if (penge > 25000 && penge <= 150000)
+                        {
+                            Console.WriteLine($"Du har { penge * 1.25 / 100 } kr. efter et aar.");
+                        }
+                        else if (penge > 150000 || penge == 150000)
+                        {
+                            Console.WriteLine($"Du har { (150000 * 1.25 / 100) + (penge - 150000) * 0.5 / 100 } kr. efter et aar.");
+                        }
+                        else
+                        {
+                            fejl1.Fejl();
                         }
 
                         slut1.Slut();
                     }
                     
                 }
+
 
             }
 
