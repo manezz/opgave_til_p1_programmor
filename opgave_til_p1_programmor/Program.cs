@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Globalization;
+using opgave_til_p1_programmor;
 
 namespace Opgave_til_p1_programmor
 {
-    class Program
+    class Program : Bog
     {
         public static string opgaveSvar = "";
         public static int i = 0;
@@ -1526,6 +1527,39 @@ namespace Opgave_til_p1_programmor
                     
                 }
 
+                while (i == 10) // Undermenu 10.0
+                {
+                    maxOpgaver = 2;
+
+                    menu1.Menu();
+
+                    underMenu1.UnderMenu();
+
+                    back1.Back();
+
+                    while (u == 1) // opgave 10.1
+                    {
+                        start1.Start();
+
+                        Bog SherlockHolmes = new Bog();
+
+                        SherlockHolmes.PrintInfo();
+
+                        slut1.Slut();
+                    }
+
+                    while (u == 2) // opgave 10.2
+                    {
+                        start1.Start();
+
+                        Bog SherlockHolmes = new Bog();
+
+                        SherlockHolmes.HarRaad();
+
+                        slut1.Slut();
+                    }
+
+                }
 
             }
 
