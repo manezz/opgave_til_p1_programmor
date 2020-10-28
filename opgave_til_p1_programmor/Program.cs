@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Globalization;
 using opgave_til_p1_programmor;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Opgave_til_p1_programmor
 {
-    class Program : Bog
+    class Program
     {
         public static string opgaveSvar = "";
         public static int i = 0;
@@ -1555,6 +1556,68 @@ namespace Opgave_til_p1_programmor
                         Bog SherlockHolmes = new Bog();
 
                         SherlockHolmes.HarRaad();
+
+                        slut1.Slut();
+                    }
+
+                }
+
+                while (i == 11) // Undermenu 11.0
+                {
+                    maxOpgaver = 4;
+
+                    menu1.Menu();
+
+                    underMenu1.UnderMenu();
+
+                    back1.Back();
+
+                    while (u == 1)
+                    {
+                        start1.Start();
+
+                        Bil bil1 = new Bil();
+
+                        bil1.MotorStart();
+                        Console.WriteLine();
+
+                        bil1.MotorSluk();
+                        Console.WriteLine();
+
+                        slut1.Slut();
+                    }
+
+                    while (u == 2)
+                    {
+                        start1.Start();
+
+                        Bil bil1 = new Bil();
+
+                        bil1.FillGas1(2.5);
+                        Console.WriteLine();
+
+                        slut1.Slut();
+                    }
+
+                    while (u == 3)
+                    {
+                        start1.Start();
+
+                        Bil bil1 = new Bil();
+
+                        bil1.FillGas2(2.5, false);
+                        Console.WriteLine();
+
+                        slut1.Slut();
+                    }
+
+                    while (u == 4)
+                    {
+                        start1.Start();
+
+                        Bil bil1 = new Bil();
+
+                        bil1.RemainingGas();
 
                         slut1.Slut();
                     }
