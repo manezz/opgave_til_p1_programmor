@@ -1688,6 +1688,43 @@ namespace Opgave_til_p1_programmor
 
                 }
 
+                while (i == 14) // Undermenu 14.0
+                {
+                    maxOpgaver = 1;
+
+                    menu1.Menu();
+
+                    underMenu1.UnderMenu();
+
+                    back1.Back();
+
+                    while (u == 1) // opgave 14.1
+                    {
+                        start1.Start();
+
+                        int[] array1 = new int[4];
+
+                        array1 = new int[] { -2, -1, 0, 10 };
+
+                        Console.WriteLine($"Her er {array1[1]} og {array1[3]}");
+                        Console.WriteLine();
+
+                        int n = 0;
+
+                        Console.WriteLine("Udskriver alle elementer i Array.");
+                        Console.WriteLine();
+
+                        foreach (int j in array1)
+                        {
+                            n++;
+                            Console.WriteLine($"{n}. {j}");
+                        }
+
+                        slut1.Slut();
+                    }
+
+                }
+
             }
 
         }
