@@ -1641,28 +1641,7 @@ namespace Opgave_til_p1_programmor
 
                 }
 
-                while (i == 12)
-                {
-                    maxOpgaver = 1;
-
-                    menu1.Menu();
-
-                    underMenu1.UnderMenu();
-
-                    back1.Back();
-
-                    while (u == 1)
-                    {
-                        start1.Start();
-
-                        
-
-                        slut1.Slut();
-                    }
-
-                }
-
-                while (i == 13) // Undermenu 12.0
+                while (i == 12) // Undermenu 12.0
                 {
                     maxOpgaver = 1;
 
@@ -1676,17 +1655,14 @@ namespace Opgave_til_p1_programmor
                     {
                         start1.Start();
 
-                        Console.WriteLine("Den viser at nedarvning virker");
-                        Console.WriteLine();
-
-                        nedarvning1.Nedarvning();
+                        
 
                         slut1.Slut();
                     }
 
                 }
 
-                while (i == 14) // Undermenu 13.0
+                while (i == 13) // Undermenu 13.0
                 {
                     maxOpgaver = 1;
 
@@ -1697,6 +1673,30 @@ namespace Opgave_til_p1_programmor
                     back1.Back();
 
                     while (u == 1) // opgave 13.1
+                    {
+                        start1.Start();
+
+                        Console.WriteLine("Den viser at nedarvning virker");
+                        Console.WriteLine();
+
+                        nedarvning1.Nedarvning();
+
+                        slut1.Slut();
+                    }
+
+                }
+
+                while (i == 14) // Undermenu 14.0
+                {
+                    maxOpgaver = 1;
+
+                    menu1.Menu();
+
+                    underMenu1.UnderMenu();
+
+                    back1.Back();
+
+                    while (u == 1) // opgave 14.1
                     {
                         start1.Start();
 
@@ -1713,7 +1713,7 @@ namespace Opgave_til_p1_programmor
 
                 }
 
-                while (i == 15) // Undermenu 14.0
+                while (i == 15) // Undermenu 15.0
                 {
                     maxOpgaver = 1;
 
@@ -1723,7 +1723,7 @@ namespace Opgave_til_p1_programmor
 
                     back1.Back();
 
-                    while (u == 1) // opgave 14.1
+                    while (u == 1) // opgave 15.1
                     {
                         start1.Start();
 
@@ -1750,7 +1750,7 @@ namespace Opgave_til_p1_programmor
 
                 }
 
-                while (i == 16) // Undermenu 15.0
+                while (i == 16) // Undermenu 16.0
                 {
                     maxOpgaver = 1;
 
@@ -1760,7 +1760,7 @@ namespace Opgave_til_p1_programmor
 
                     back1.Back();
 
-                    while (u == 1)
+                    while (u == 1) // opgave 16.1
                     {
                         start1.Start();
 
@@ -1789,6 +1789,26 @@ namespace Opgave_til_p1_programmor
                         slut1.Slut();
                     }
 
+                }
+
+                while (i == 17) // Undermenu 17.0
+                {
+                    maxOpgaver = 1;
+
+                    menu1.Menu();
+
+                    underMenu1.UnderMenu();
+
+                    back1.Back();
+
+                    while (u == 1) // opgave 17.1
+                    {
+                        start1.Start();
+
+
+
+                        slut1.Slut();
+                    }
                 }
 
             }
