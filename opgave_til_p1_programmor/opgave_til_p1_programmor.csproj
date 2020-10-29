@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Boger.cs" />
     <Compile Include="Bil.cs" />
+    <Compile Include="Furniture.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

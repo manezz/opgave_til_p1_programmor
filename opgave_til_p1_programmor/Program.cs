@@ -121,6 +121,16 @@ namespace Opgave_til_p1_programmor
             }
         }
 
+        public class Mobler : Computer
+        {
+            public void Nedarvning()
+            {
+                Console.WriteLine($"Du har {chash} kr. en Stol koster {chairPrice} " +
+                    $"kr. og en Computer koster {computerPrice} kr.");
+            }
+        }
+
+
         static void Main(string[] args)
         {
             Pro menu1 = new Pro();
@@ -129,6 +139,7 @@ namespace Opgave_til_p1_programmor
             Pro slut1 = new Pro();
             Pro start1 = new Pro();
             Pro fejl1 = new Pro();
+            Mobler nedarvning1 = new Mobler();
 
             string svar;
 
@@ -1572,7 +1583,7 @@ namespace Opgave_til_p1_programmor
 
                     back1.Back();
 
-                    while (u == 1)
+                    while (u == 1) // opgave 11.1
                     {
                         start1.Start();
 
@@ -1587,7 +1598,7 @@ namespace Opgave_til_p1_programmor
                         slut1.Slut();
                     }
 
-                    while (u == 2)
+                    while (u == 2) // opgave 11.2
                     {
                         start1.Start();
 
@@ -1599,7 +1610,7 @@ namespace Opgave_til_p1_programmor
                         slut1.Slut();
                     }
 
-                    while (u == 3)
+                    while (u == 3) // opgave 11.3
                     {
                         start1.Start();
 
@@ -1611,13 +1622,37 @@ namespace Opgave_til_p1_programmor
                         slut1.Slut();
                     }
 
-                    while (u == 4)
+                    while (u == 4) // opgave 11.4
                     {
                         start1.Start();
 
                         Bil bil1 = new Bil();
 
                         bil1.RemainingGas(1.2);
+
+                        slut1.Slut();
+                    }
+
+                }
+
+                while (i == 12) // Undermenu 12.0
+                {
+                    maxOpgaver = 1;
+
+                    menu1.Menu();
+
+                    underMenu1.UnderMenu();
+
+                    back1.Back();
+
+                    while (u == 1) // opgave 12.1
+                    {
+                        start1.Start();
+
+                        Console.WriteLine("Den viser at nedarvning virker");
+                        Console.WriteLine();
+
+                        nedarvning1.Nedarvning();
 
                         slut1.Slut();
                     }
