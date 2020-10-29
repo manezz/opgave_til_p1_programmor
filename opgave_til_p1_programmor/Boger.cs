@@ -35,5 +35,22 @@ namespace opgave_til_p1_programmor
             }
         }
 
+        public void SaetAlle()
+        {
+            Console.WriteLine("Alle Variabler");
+            Console.WriteLine();
+
+            Console.WriteLine($"var 1 - {bogPris}");
+            Console.WriteLine($"var 2 - {bogPenge}");
+        }
+
+        public void SaetEn()
+        {
+            Console.WriteLine("En Variable");
+            Console.WriteLine();
+
+            Console.WriteLine($"var - {bogPenge}");
+        }
+
     }
 }

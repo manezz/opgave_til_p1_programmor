@@ -140,6 +140,8 @@ namespace Opgave_til_p1_programmor
             Pro start1 = new Pro();
             Pro fejl1 = new Pro();
             Mobler nedarvning1 = new Mobler();
+            Bog saetAlle1 = new Bog();
+            Bog saetEn1 = new Bog();
 
             string svar;
 
@@ -1653,6 +1655,33 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine();
 
                         nedarvning1.Nedarvning();
+
+                        slut1.Slut();
+                    }
+
+                }
+
+                while (i == 13) // Undermenu 13.0
+                {
+                    maxOpgaver = 1;
+
+                    menu1.Menu();
+
+                    underMenu1.UnderMenu();
+
+                    back1.Back();
+
+                    while (u == 1) // opgave 13.1
+                    {
+                        start1.Start();
+
+                        saetAlle1.SaetAlle();
+
+                        Console.WriteLine();
+
+                        saetEn1.SaetEn();
+
+                        Console.WriteLine();
 
                         slut1.Slut();
                     }
