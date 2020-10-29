@@ -7,6 +7,7 @@ using System.Threading;
 using System.Globalization;
 using opgave_til_p1_programmor;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography;
 
 namespace Opgave_til_p1_programmor
 {
@@ -1568,7 +1569,10 @@ namespace Opgave_til_p1_programmor
 
                         Bog SherlockHolmes = new Bog();
 
-                        SherlockHolmes.HarRaad();
+                        Console.WriteLine("Hvor mange penge har du?");
+                        Console.WriteLine();
+
+                        SherlockHolmes.HarRaad(Console.ReadLine());
 
                         slut1.Slut();
                     }
@@ -1637,7 +1641,28 @@ namespace Opgave_til_p1_programmor
 
                 }
 
-                while (i == 12) // Undermenu 12.0
+                while (i == 12)
+                {
+                    maxOpgaver = 1;
+
+                    menu1.Menu();
+
+                    underMenu1.UnderMenu();
+
+                    back1.Back();
+
+                    while (u == 1)
+                    {
+                        start1.Start();
+
+                        
+
+                        slut1.Slut();
+                    }
+
+                }
+
+                while (i == 13) // Undermenu 12.0
                 {
                     maxOpgaver = 1;
 
@@ -1661,7 +1686,7 @@ namespace Opgave_til_p1_programmor
 
                 }
 
-                while (i == 13) // Undermenu 13.0
+                while (i == 14) // Undermenu 13.0
                 {
                     maxOpgaver = 1;
 
@@ -1688,7 +1713,7 @@ namespace Opgave_til_p1_programmor
 
                 }
 
-                while (i == 14) // Undermenu 14.0
+                while (i == 15) // Undermenu 14.0
                 {
                     maxOpgaver = 1;
 
@@ -1719,6 +1744,47 @@ namespace Opgave_til_p1_programmor
                             n++;
                             Console.WriteLine($"{n}. {j}");
                         }
+
+                        slut1.Slut();
+                    }
+
+                }
+
+                while (i == 16) // Undermenu 15.0
+                {
+                    maxOpgaver = 1;
+
+                    menu1.Menu();
+
+                    underMenu1.UnderMenu();
+
+                    back1.Back();
+
+                    while (u == 1)
+                    {
+                        start1.Start();
+
+                        int[] array1 = { 1, 2, 3, 4, 5, 6 };
+                        string[] array2 = { "En", "To", "Tre", "Fire", "Fem" };
+
+                        Console.WriteLine("Udskriver hele Array 1");
+                        Console.WriteLine();
+
+                        for (int j = 0; j < array1.Length; j++)
+                        {
+                            Console.WriteLine($"Array 1 - {array1[j]}");
+                        }
+
+                        Console.WriteLine();
+                        Console.WriteLine("Udskriver hele Array 2");
+                        Console.WriteLine();
+
+                        foreach (string n in array2)
+                        {
+                            Console.WriteLine($"Array 2 - {n}");
+                        }
+
+                        Console.WriteLine();
 
                         slut1.Slut();
                     }

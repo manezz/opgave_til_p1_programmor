@@ -43,6 +43,6 @@ namespace opgave_til_p1_programmor
         {
             Console.WriteLine($"You have {gas} liters left");
         }
-
+                        
     }
 }
