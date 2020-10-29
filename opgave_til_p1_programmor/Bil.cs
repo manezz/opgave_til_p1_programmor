@@ -39,11 +39,9 @@ namespace opgave_til_p1_programmor
             Console.WriteLine($"Filed tank with: {liters} liters of {fuel}.");
         }
         
-        public double RemainingGas(double gas)
+        public void RemainingGas(double gas)
         {
-            double r;
-
-            
+            Console.WriteLine($"You have {gas} liters left");
         }
 
     }

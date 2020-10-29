@@ -1617,7 +1617,7 @@ namespace Opgave_til_p1_programmor
 
                         Bil bil1 = new Bil();
 
-                        bil1.RemainingGas();
+                        bil1.RemainingGas(1.2);
 
                         slut1.Slut();
                     }
