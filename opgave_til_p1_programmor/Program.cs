@@ -120,6 +120,13 @@ namespace Opgave_til_p1_programmor
                 Console.ResetColor();
                 Console.Clear();
             }
+
+            public void Farve(string farveSkrift)
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine(farveSkrift);
+                Console.ResetColor();
+            }
         }
 
         public class Mobler : Computer
@@ -143,6 +150,7 @@ namespace Opgave_til_p1_programmor
             Mobler nedarvning1 = new Mobler();
             Bog saetAlle1 = new Bog();
             Bog saetEn1 = new Bog();
+            Pro farve1 = new Pro();
 
             string svar;
 
@@ -1803,10 +1811,77 @@ namespace Opgave_til_p1_programmor
 
                     while (u == 1) // opgave 17.1
                     {
+                        // Viser opgave Nummer
                         start1.Start();
 
+                        // opgavebeskrivelse
+                        Console.WriteLine("Her forklare jeg om " +
+                            "Private, Protected og Public.");
+                        Console.WriteLine();
 
+                        // Skifter farve på Titel
+                        farve1.Farve("Tilgaengelighed");
+                        Console.WriteLine();
 
+                        // Beskriver foredelene ved Tilgaengelighed
+                        Console.WriteLine("Gode grunde til at have styr på Tilgaengelighed:");
+                        Console.WriteLine("- For at de dele af programmet der skal" +
+                            " bruge en variable, har adgang til det.");
+                        Console.WriteLine("- For at varibler kun er tilgaengelige" +
+                            " til, de klasser der sklal bruge dem.");
+                        Console.WriteLine("- For at forbygge at der kommer, " +
+                            "let ungaalige fejl i dit program.");
+                        Console.WriteLine();
+
+                        // Skifter farve på Titel
+                        farve1.Farve("Private");
+                        Console.WriteLine();
+
+                        // Beskriver hvad Private er
+                        Console.WriteLine("Som standard er en fx en klasse " +
+                            "Private, hvis andet ikke er angivet.");
+                        Console.WriteLine("Private betyder at den kun er " +
+                            "tilgaengelig, i fx den klasse hvor den er difineret.");
+                        Console.WriteLine("Man angiver en variable " +
+                            "private, som vist under.");
+                        Console.WriteLine();
+
+                        // Eksempel på Syntax til Private Variabel
+                        Console.WriteLine("private int test = 13;");
+                        Console.WriteLine();
+
+                        // Skifter farve på Titel
+                        farve1.Farve("Protected");
+                        Console.WriteLine();
+
+                        // Beskriver hvad Protected er
+                        Console.WriteLine("Protected betyder at den er tilgeangelig" +
+                            ", til nedarvede klasser der nedarver og i klassen selv.");
+                        Console.WriteLine("For at bruge Protected, skal det" +
+                            " vaere angivet, som vist under.");
+                        Console.WriteLine();
+
+                        // Eksempel på Syntax til Protected Variabel
+                        Console.WriteLine("protected int test = 17;");
+                        Console.WriteLine();
+                        
+                        // Skifter farve på Titel
+                        farve1.Farve("Public");
+                        Console.WriteLine();
+
+                        // Beskriver hvad Public er
+                        Console.WriteLine("Public er den mest aabne" +
+                            ", tilgaengelighed man kan have.");
+                        Console.WriteLine("Public er som det navnet hentyder " +
+                            "offentlig, saa alle kan bruge fx en Public int.");
+                        Console.WriteLine("Man angiver en variable " +
+                            "Public, som vist under.");
+                        Console.WriteLine();
+
+                        // Eksempel på Syntax til Public Variabel
+                        Console.WriteLine("public int test = 23;");
+                        Console.WriteLine();
+                        
                         slut1.Slut();
                     }
                 }
