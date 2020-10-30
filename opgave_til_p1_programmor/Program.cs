@@ -1,23 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using opgave_til_p1_programmor;
+using System;
 using System.Threading;
-using System.Globalization;
-using opgave_til_p1_programmor;
-using System.Security.Cryptography.X509Certificates;
-using System.Security.Cryptography;
 
 namespace Opgave_til_p1_programmor
 {
     class Program
     {
         public static string opgaveSvar = "";
+
+        // Bliver brugt til at vaelge,
+        // mellem emner i de yderste while loops
         public static int i = 0;
+
+        // Bliver brugt til at vaelge mellem,
+        // de opgaver der er til det valgte,
+        // emne i det indre while loop
         public static int u = 0;
+
+        // Bliver brugt til at holde,
+        // vaerdien for antalet af opgaver,
+        // i det valgte emne
         public static int maxOpgaver;
 
+        // Array med alle emner
         public static string[] kategorier = {
             "Variabler",
             "Strings",
@@ -38,8 +43,10 @@ namespace Opgave_til_p1_programmor
             "Public, Private og Protected"
         };
 
-        public class Pro : Program
+        // Pro klassen, obevarer de fleste Metoder
+        public class Pro
         {
+            // Skifter farven i consolen til 
             public void Menu()
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -85,7 +92,10 @@ namespace Opgave_til_p1_programmor
                 Console.WriteLine();
                 for (int s = 1; s <= maxOpgaver; s++)
                 {
-                    Console.WriteLine($"{s}. opgave");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.Write($"{s}.");
+                    Console.ResetColor();
+                    Console.WriteLine(" opgave");
                 }
                 Console.WriteLine("B - Tilbage");
                 Console.WriteLine();
@@ -166,7 +176,10 @@ namespace Opgave_til_p1_programmor
                 foreach (string p in kategorier)
                 {
                     a++;
-                    Console.WriteLine($"{a}. {p}");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.Write($"{a}.");
+                    Console.ResetColor();
+                    Console.WriteLine($" {p}");
                 }
                 Console.WriteLine("L - lukker program");
 
@@ -288,8 +301,7 @@ namespace Opgave_til_p1_programmor
                             }
                             catch (Exception)
                             {
-                                Console.WriteLine("Fejl !");
-                                Console.ReadLine();
+                                fejl1.Fejl();
                             }
                         }
 
@@ -316,8 +328,7 @@ namespace Opgave_til_p1_programmor
                             }
                             catch (Exception)
                             {
-                                Console.WriteLine("Fejl !");
-                                Console.ReadLine();
+                                fejl1.Fejl();
                             }
                         }
 
@@ -570,13 +581,7 @@ namespace Opgave_til_p1_programmor
                             }
                             catch (Exception)
                             {
-                                Console.Clear();
-                                alder = 0;
-
-                                Console.WriteLine("Fejl !");
-                                Console.ReadLine();
-
-                                Console.Clear();
+                                fejl1.Fejl();
                             }
                         }
 
@@ -610,12 +615,7 @@ namespace Opgave_til_p1_programmor
                             }
                             catch (Exception)
                             {
-                                Console.Clear();
-
-                                Console.WriteLine("Fejl !");
-                                Console.ReadLine();
-
-                                Console.Clear();
+                                fejl1.Fejl();
                             }
                         }
 
@@ -720,12 +720,7 @@ namespace Opgave_til_p1_programmor
                             }
                             catch (Exception)
                             {
-                                Console.Clear();
-
-                                Console.WriteLine("Fejl !");
-                                Console.ReadLine();
-
-                                Console.Clear();
+                                fejl1.Fejl();
                             }
                         }
 
@@ -799,12 +794,7 @@ namespace Opgave_til_p1_programmor
                             }
                             else
                             {
-                                Console.Clear();
-
-                                Console.WriteLine("Fejl !");
-                                Console.ReadLine();
-
-                                Console.Clear();
+                                fejl1.Fejl();
                             }
                         }
 
@@ -821,12 +811,7 @@ namespace Opgave_til_p1_programmor
                             }
                             catch (Exception)
                             {
-                                Console.Clear();
-
-                                Console.WriteLine("Fejl !");
-                                Console.ReadLine();
-
-                                Console.Clear();
+                                fejl1.Fejl();
                             }
                         }
 
@@ -877,7 +862,7 @@ namespace Opgave_til_p1_programmor
                             }
                             catch (Exception)
                             {
-                                Console.WriteLine("Fejl !");
+                                fejl1.Fejl();
                             }
                         }
 
@@ -1118,12 +1103,7 @@ namespace Opgave_til_p1_programmor
                             }
                             catch (Exception)
                             {
-                                Console.Clear();
-
-                                Console.WriteLine("Fejl !");
-
-                                Console.ReadLine();
-                                Console.Clear();
+                                fejl1.Fejl();
                             }
                         }
 
@@ -1265,12 +1245,7 @@ namespace Opgave_til_p1_programmor
                             }
                             catch (Exception)
                             {
-                                Console.Clear();
-
-                                Console.WriteLine("Fejl !");
-                                Console.ReadLine();
-
-                                Console.Clear();
+                                fejl1.Fejl();
                             }
                         }
 

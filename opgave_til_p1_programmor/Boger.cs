@@ -1,12 +1,5 @@
 ﻿using Opgave_til_p1_programmor;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace opgave_til_p1_programmor
 {
