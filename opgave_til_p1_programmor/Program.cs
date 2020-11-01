@@ -54,6 +54,8 @@ namespace Opgave_til_p1_programmor
                 Console.ResetColor();
             }
 
+            // Den her bruges til at gå,
+            // tilbage til hovedmenuen
             public void Back()
             {
                 opgaveSvar = Console.ReadLine();
@@ -87,6 +89,9 @@ namespace Opgave_til_p1_programmor
                 Console.Clear();
             }
 
+
+            // Den her bliver brugt til at,
+            // printe undermenuen til konsolen
             public void UnderMenu()
             {
                 Console.WriteLine();
@@ -101,6 +106,8 @@ namespace Opgave_til_p1_programmor
                 Console.WriteLine();
             }
 
+            // Den her bruges til returnere til,
+            //  undermenuen fra den opgave man har valgt
             public void Slut()
             {
                 Console.ReadLine();
@@ -108,6 +115,8 @@ namespace Opgave_til_p1_programmor
                 u = 0;
             }
 
+            // Den her printer den opgave du,
+            // har valgt ud i topen i rødt
             public void Start()
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -117,7 +126,9 @@ namespace Opgave_til_p1_programmor
 
                 Console.ResetColor();
             }
-
+            
+            // Den her bruges når der,
+            // skal printes en fejl
             public void Fejl()
             {
                 Console.Clear();
@@ -130,7 +141,9 @@ namespace Opgave_til_p1_programmor
                 Console.ResetColor();
                 Console.Clear();
             }
-
+            
+            // Den her bruges til at,
+            // skifte farve på text
             public void Farve(string farveSkrift)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
@@ -139,8 +152,11 @@ namespace Opgave_til_p1_programmor
             }
         }
 
+        // Den her nedarver fra computer klassen
         public class Mobler : Computer
         {
+            // Den her bruges til at demonstrer,
+            // at nedarvningen har virket
             public void Nedarvning()
             {
                 Console.WriteLine($"Du har {chash} kr. en Stol koster {chairPrice} " +
@@ -148,9 +164,9 @@ namespace Opgave_til_p1_programmor
             }
         }
 
-
         static void Main(string[] args)
         {
+            // Her er mine orbjekter
             Pro menu1 = new Pro();
             Pro back1 = new Pro();
             Pro underMenu1 = new Pro();
@@ -162,6 +178,8 @@ namespace Opgave_til_p1_programmor
             Bog saetEn1 = new Bog();
             Pro farve1 = new Pro();
 
+            // Den her bliver brugt til,
+            // at vaelge kategori
             string svar;
 
             while (i == 0) // Hovedemenu 0.0
@@ -170,8 +188,9 @@ namespace Opgave_til_p1_programmor
                 Console.WriteLine("Vaelg et Emne");
                 Console.ResetColor();
 
+                // Det her udskriver de forskellige,
+                // kategorier og giver dem farve
                 int a = 0;
-
                 Console.WriteLine();
                 foreach (string p in kategorier)
                 {
@@ -182,11 +201,11 @@ namespace Opgave_til_p1_programmor
                     Console.WriteLine($" {p}");
                 }
                 Console.WriteLine("L - lukker program");
-
                 Console.WriteLine();
 
+                // Den her bliver brugt til hvis det,
+                // bliver valgt at lukker fra hovedmenuen
                 svar = Console.ReadLine();
-
                 if (svar == "l" || svar == "L")
                 {
                     return;
@@ -202,21 +221,31 @@ namespace Opgave_til_p1_programmor
                         fejl1.Fejl();
                     }
                 }
-
                 Console.Clear();
 
                 while (i == 1) // Undermenu 1.0
                 {
+                    // Det her angiver hvor mange,
+                    // opgaver der er så det kan,
+                    // bruges af UnderMenu
                     maxOpgaver = 6;
 
+                    // Den her printer det valgte,
+                    // emne i rødt
                     menu1.Menu();
 
+                    // Den her printer alle opgaver,
+                    // der er til det valgte emne ud
                     underMenu1.UnderMenu();
 
+                    // Den her giver muglighed for at,
+                    // gaa tilbage til Hovedmenuen
                     back1.Back();
 
                     while (u == 1) // opgave 1.1
                     {
+                        // Bruges til at udskrive hvilken,
+                        // opgave der er valgt
                         start1.Start();
 
                         int tal1;
@@ -228,6 +257,8 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine(tal1);
                         Console.WriteLine(tal2);
 
+                        // Bruges til at afslutter opgaven,
+                        // og gaa tilbage til undermenuen
                         slut1.Slut();
                     }
 
