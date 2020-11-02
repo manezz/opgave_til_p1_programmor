@@ -1,4 +1,4 @@
 # Opgave Til P1 Programmor
 forste p1 C# Projekt
 
-![Optional Text](../master/P1-Programmor-Console-Foto1.JPG)
+![Optional Text](../master/P1_Programmor_Konsol_Foto1.PNG)
