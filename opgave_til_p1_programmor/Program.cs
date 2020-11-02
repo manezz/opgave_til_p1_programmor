@@ -58,6 +58,7 @@ namespace Opgave_til_p1_programmor
             // tilbage til hovedmenuen
             public void Back()
             {
+                Pro fejl1 = new Pro();
                 opgaveSvar = Console.ReadLine();
 
                 u = 0;
@@ -75,14 +76,7 @@ namespace Opgave_til_p1_programmor
                     }
                     catch (Exception)
                     {
-                        Console.Clear();
-
-                        Console.WriteLine("Fejl !");
-
-                        opgaveSvar = "";
-                        u = 0;
-
-                        Console.ReadLine();
+                        fejl1.Fejl();
                     }
                 }
 
