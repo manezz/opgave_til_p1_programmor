@@ -1,5 +1,6 @@
 ﻿using opgave_til_p1_programmor;
 using System;
+using System.Reflection;
 using System.Threading;
 
 namespace Opgave_til_p1_programmor
@@ -46,7 +47,7 @@ namespace Opgave_til_p1_programmor
         // Pro klassen, obevarer de fleste Metoder
         public class Pro
         {
-            // Skifter farven i consolen til 
+            // Skifter farven i consolen
             public void Menu()
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -256,7 +257,7 @@ namespace Opgave_til_p1_programmor
                         slut1.Slut();
                     }
 
-                    while (u == 2) // opgave 1.2
+                    while (u == 2) // opgave 1.2 
                     {
                         start1.Start();
 
@@ -285,7 +286,8 @@ namespace Opgave_til_p1_programmor
                         int Alder = 16;
                         double Penge = 1234.34;
 
-                        Console.WriteLine($"Jeg hedder {Navn}, er {Alder} år gammel pg har tjent {Penge} kr. på at lappe cykler");
+                        Console.WriteLine($"Jeg hedder {Navn}, er {Alder} år" +
+                            $" gammel pg har tjent {Penge} kr. på at lappe cykler");
 
                         slut1.Slut();
                     }
@@ -330,7 +332,8 @@ namespace Opgave_til_p1_programmor
                             }
                         }
 
-                        Console.WriteLine($"Jeg hedder {navn} og er {alder} gammel");
+                        Console.WriteLine($"Jeg hedder {navn} og" +
+                            $" er {alder} gammel");
 
                         slut1.Slut();
                     }
@@ -657,9 +660,7 @@ namespace Opgave_til_p1_programmor
                             Console.WriteLine("Du er for ung.");
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.Slut();
                     }
 
                     while (u == 4) // opgave 6.4
@@ -762,9 +763,7 @@ namespace Opgave_til_p1_programmor
                             Console.WriteLine($"Du faar {96 * 1.93 + (km - 120) * 0.97} kr. i fradrag");
                         }
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.Slut();
                     }
 
                     while (u == 7) // opgave 6.7
@@ -852,7 +851,6 @@ namespace Opgave_til_p1_programmor
                         Console.WriteLine("Vent 10 sek (skriv ikke noget)");
                         Thread.Sleep(10000);
                         Console.ResetColor();
-
                         Console.Clear();
                         u = 0;
                     }
@@ -907,7 +905,8 @@ namespace Opgave_til_p1_programmor
                                 {
                                     string tillykke = "TILLYKKE DU HAR VUNDET";
 
-                                    Console.SetCursorPosition(Console.WindowWidth / 2 - tillykke.Length / 2, Console.WindowHeight / 2);
+                                    Console.SetCursorPosition(Console.WindowWidth / 2 - 
+                                        tillykke.Length / 2, Console.WindowHeight / 2);
 
                                     Console.ForegroundColor = ConsoleColor.White;
 
@@ -939,7 +938,13 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine("Velg en drink.");
 
-                        Console.WriteLine("\n1. Isbjorn\n2. Champagnebrus\n3. Tequila Sunrise\n4. Mojito\n5. Brandbil\n6. Filur");
+                        Console.WriteLine(
+                            "\n1. Isbjorn" +
+                            "\n2. Champagnebrus" +
+                            "\n3. Tequila Sunrise" +
+                            "\n4. Mojito" +
+                            "\n5. Brandbil" +
+                            "\n6. Filur");
 
                         valg = Console.ReadLine();
 
@@ -997,13 +1002,15 @@ namespace Opgave_til_p1_programmor
                                 }
                             default:
                                 {
-                                    Console.WriteLine("Det er ikke et acceptabelt valg.");
+                                    Console.WriteLine("Det er ikke et " +
+                                        "acceptabelt valg.");
 
                                     break;
                                 }
                         }
 
-                        Console.WriteLine($"Du har valgt {valg}, som koster {pris} kr.");
+                        Console.WriteLine($"Du har valgt {valg}, " +
+                            $"som koster {pris} kr.");
 
                         slut1.Slut();
                     }
@@ -1114,7 +1121,7 @@ namespace Opgave_til_p1_programmor
                     {
                         start1.Start();
 
-                        int k = 0;
+                        int k;
 
                         while (true)
                         {
@@ -1184,9 +1191,7 @@ namespace Opgave_til_p1_programmor
 
                         Console.WriteLine();
 
-                        Console.ReadLine();
-                        Console.Clear();
-                        u = 0;
+                        slut1.Slut();
                     }
 
                     while (u == 8) // opgave 8.8
@@ -1538,7 +1543,8 @@ namespace Opgave_til_p1_programmor
                         }
                         else if (penge > 150000 || penge == 150000)
                         {
-                            Console.WriteLine($"Du har { (150000 * 1.25 / 100) + (penge - 150000) * 0.5 / 100 } kr. efter et aar.");
+                            Console.WriteLine($"Du har { (150000 * 1.25 / 100) + (penge - 150000) * 0.5 / 100 }" +
+                                $" kr. efter et aar.");
                         }
                         else
                         {
@@ -1663,7 +1669,10 @@ namespace Opgave_til_p1_programmor
                     {
                         start1.Start();
 
-                        
+                        Bog titel2 = new Bog();
+
+                        titel2.SherlockHolmes();
+                        titel2.MobyDick();
 
                         slut1.Slut();
                     }

@@ -1,4 +1,4 @@
-﻿namespace opgave_til_p1_programmor
+﻿ namespace opgave_til_p1_programmor
 {
     class Furniture
     {
@@ -14,5 +14,4 @@
     {
         protected int computerPrice = 3000;
     }
-
 }

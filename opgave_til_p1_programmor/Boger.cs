@@ -82,6 +82,5 @@ namespace opgave_til_p1_programmor
 
             Console.WriteLine($"var 1 - {saetBogString1}");
         }
-
     }
 }
